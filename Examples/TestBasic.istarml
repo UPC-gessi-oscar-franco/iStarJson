@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<istarml version="1.0">
+   <diagram name="Test2.ood">
+      <actor id="01" name="Patient">
+         <boundary>
+            <ielement type="goal" id="02" name="Be well">
+              
+               <ielementLink type="decomposition" value="and" iref="03">
+              
+               </ielementLink>
+            </ielement>
+            <ielement type="task" id="03" name="Get Medical Assesment">
+              
+               <ielementLink type="decomposition" value="and" iref="04">
+               </ielementLink>
+               <ielementLink type="decomposition" value="and" iref="05">
+              
+               </ielementLink>
+            </ielement>
+            <ielement type="task" id="04" name="Detect problem">
+              
+            </ielement>
+            <ielement type="task" id="05" name="Get treated">
+              
+               <ielementLink type="decomposition" value="and" iref="06">
+              
+               </ielementLink>
+               <ielementLink type="decomposition" value="and" iref="07">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="task" id="06" name="Follow public treatment">
+              
+            </ielement>
+            <ielement type="task" id="07" name="Buy Private Insurance">
+              
+            </ielement>
+         </boundary>
+      </actor>
+   </diagram>
+</istarml>

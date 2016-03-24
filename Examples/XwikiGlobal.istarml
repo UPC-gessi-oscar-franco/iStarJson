@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<istarml version="1.0">
+   <diagram name="Xwiki.ood">
+      <graphic content="SVG"/>
+      <ielement type="goal" id="__YPl0CRUEeSfiuRTAfY-Qg" name="Get involved">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender aref="_ZDkxACRUEeSfiuRTAfY-Qg">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee aref="_WXI_8CRUEeSfiuRTAfY-Qg">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <ielement type="softgoal" id="_ksYKsCRVEeSfiuRTAfY-Qg" name="XWiki health maintained">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </ielement>
+      <ielement type="softgoal" id="_u0x-ECRVEeSfiuRTAfY-Qg" name="XWiki used">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </ielement>
+      <ielement type="softgoal" id="_zRSloCRVEeSfiuRTAfY-Qg" name="XWiki kept evolving">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </ielement>
+      <ielement type="softgoal" id="__AKnkCRVEeSfiuRTAfY-Qg" name="XWiki contributed">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </ielement>
+      <ielement type="softgoal" id="_HdHlwCRWEeSfiuRTAfY-Qg" name="XWiki effectively changed">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </ielement>
+      <ielement type="softgoal" id="_NBIA4CRWEeSfiuRTAfY-Qg" name="Keep contributong Xwiki">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </ielement>
+      <actor type="agent" id="_UtwnUCRUEeSfiuRTAfY-Qg" name="XWikiDeveloper">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <actorLink type="is_a" aref="_WXI_8CRUEeSfiuRTAfY-Qg">
+            <graphic content="SVG"/>
+         </actorLink>
+      </actor>
+      <actor type="agent" id="_WXI_8CRUEeSfiuRTAfY-Qg" name="Community Member">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <actorLink type="is_part_of" aref="_ZDkxACRUEeSfiuRTAfY-Qg">
+            <graphic content="SVG"/>
+         </actorLink>
+      </actor>
+      <actor type="agent" id="_ZDkxACRUEeSfiuRTAfY-Qg" name="XWiki.org">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </actor>
+      <actor type="agent" id="_dg4CwCRUEeSfiuRTAfY-Qg" name="Contributor">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <actorLink type="is_a" aref="_UtwnUCRUEeSfiuRTAfY-Qg">
+            <graphic content="SVG"/>
+         </actorLink>
+      </actor>
+      <actor type="agent" id="_fV_xUCRUEeSfiuRTAfY-Qg" name="ActiveCommitter">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <actorLink type="is_a" aref="_UtwnUCRUEeSfiuRTAfY-Qg">
+            <graphic content="SVG"/>
+         </actorLink>
+      </actor>
+      <actor type="agent" id="_gk_7ECRUEeSfiuRTAfY-Qg" name="Xwiki Development Team Member">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <actorLink type="is_a" aref="_fV_xUCRUEeSfiuRTAfY-Qg">
+            <graphic content="SVG"/>
+         </actorLink>
+      </actor>
+   </diagram>
+</istarml>

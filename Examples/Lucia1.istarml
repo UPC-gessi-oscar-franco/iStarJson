@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<istarml version="1.0">
+   <diagram name="Customer.ood">
+      <graphic content="SVG"/>
+      <ielement type="resource" id="_LBc10J0ZEeWMTfZIXh-pGg" name="Contact information">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender iref="_PM1KsJ3VEeWZU_ZXxC6lTQ" aref="_fRggkJ0XEeWMTfZIXh-pGg">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee aref="_ilDU8J0XEeWMTfZIXh-pGg">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <ielement type="resource" id="_SxmYYJ0ZEeWMTfZIXh-pGg" name="Demand information">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender iref="_PM1KsJ3VEeWZU_ZXxC6lTQ" aref="_fRggkJ0XEeWMTfZIXh-pGg">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee aref="_7tKzcJ0YEeWMTfZIXh-pGg">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <ielement type="resource" id="_YGkFYJ0uEeWMTfZIXh-pGg" name="Product / Service / Feature">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender aref="_hVLBcJ0XEeWMTfZIXh-pGg">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee iref="_5qP90J02EeWMTfZIXh-pGg" aref="_fRggkJ0XEeWMTfZIXh-pGg">
+               <graphic content="SVG"/>
+            </dependee>
+            <dependee iref="_OHoSoJ3UEeWZU_ZXxC6lTQ" aref="_fRggkJ0XEeWMTfZIXh-pGg">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <ielement type="task" id="_cCulAJ5XEeWdweXRfGplUA" name="To obtain advice">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender iref="_O3B1MJ5WEeWdweXRfGplUA" aref="_fRggkJ0XEeWMTfZIXh-pGg">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee aref="_L7mJYJ5XEeWdweXRfGplUA">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <ielement type="resource" id="__fw2oLk4EeWY084x2_LBEg" name="Value Model">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender aref="_m6b5AJ2UEeWbOq1XqvRtXQ">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee iref="_lCPBQJ2UEeWbOq1XqvRtXQ" aref="_fRggkJ0XEeWMTfZIXh-pGg">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <ielement type="resource" id="_uJBs8Lk7EeWv1e0QBpbzyA" name="Laws - Regulations">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender iref="_mmDLELk4EeWY084x2_LBEg" aref="_fRggkJ0XEeWMTfZIXh-pGg">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee aref="_gK6lkLk2EeWY084x2_LBEg">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <actor id="_fRggkJ0XEeWMTfZIXh-pGg" name="OSS Adopter">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <boundary>
+            <graphic content="basic" xpos="235" ypos="540" width="830" height="645" shape="ellipse"
+                     unit="pt"
+                     bgcolor="FFFFFF"
+                     fontfamily="Segoe UI"
+                     fontcolor="000000"
+                     fontsize="12"/>
+            <ielement type="goal" id="_TGXRkJ2UEeWbOq1XqvRtXQ"
+                      name="1 To offer products/services/features at-the-lowest-cost">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_yVhR4KApEeWDqcLEP2OtUA">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="softgoal" id="_lCPBQJ2UEeWbOq1XqvRtXQ"
+                      name="1 To give sustainability to the value model to shareholders">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+            </ielement>
+            <ielement type="goal" id="_NVxu0J2bEeWbOq1XqvRtXQ"
+                      name="1 To deliver the prod/serv. according to SLA">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+            </ielement>
+            <ielement type="goal" id="_TdBZ4J2bEeWbOq1XqvRtXQ"
+                      name="1 To reduce development time-effort">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_m8jwYJ3KEeWZU_ZXxC6lTQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+               <ielementLink type="contribution" value="help" iref="_A-7QoJ3MEeWZU_ZXxC6lTQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="goal" id="_Blm28J2cEeWbOq1XqvRtXQ"
+                      name="1 To improve revenues resulting from one-time customer payments">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_TGXRkJ2UEeWbOq1XqvRtXQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="goal" id="_IUSVcJ2cEeWbOq1XqvRtXQ"
+                      name="1 To improve revenues resulting from ongoing payments (subscriptions)">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_TGXRkJ2UEeWbOq1XqvRtXQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="task" id="_MuhPoJ2dEeWbOq1XqvRtXQ" name="Act-SEL">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="E3A49C"
+                        fontsize="12"/>
+               <ielementLink type="decomposition" value="and" iref="_TEZzoJ2dEeWbOq1XqvRtXQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="goal" id="_TEZzoJ2dEeWbOq1XqvRtXQ" name="1 To select OSS component">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_CIbi4KJMEeW8fPReGqL5Jw">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="softgoal" id="_yy6agJ2iEeWbOq1XqvRtXQ" name="Technical quality">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="E3A49C"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_NVxu0J2bEeWbOq1XqvRtXQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="goal" id="_ZNE94J2kEeWbOq1XqvRtXQ" name="1 To reduce time-to-market">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_yVhR4KApEeWDqcLEP2OtUA">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="goal" id="_m8jwYJ3KEeWZU_ZXxC6lTQ"
+                      name="1 To reduce time-to-market software delivery">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_ZNE94J2kEeWbOq1XqvRtXQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="softgoal" id="_1-3cgJ3LEeWZU_ZXxC6lTQ"
+                      name="1 To work according to specific ethical, moral, and political statements">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_yVhR4KApEeWDqcLEP2OtUA">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="goal" id="_A-7QoJ3MEeWZU_ZXxC6lTQ" name="1 To reduce costs">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_TGXRkJ2UEeWbOq1XqvRtXQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="task" id="_PM1KsJ3VEeWZU_ZXxC6lTQ" name="Obtain contact information">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="decomposition" value="or" iref="_NVxu0J2bEeWbOq1XqvRtXQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="goal" id="_8A7uYJ5UEeWdweXRfGplUA"
+                      name="1 To offer the product/service/feature required">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_yVhR4KApEeWDqcLEP2OtUA">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="task" id="_5qP90J02EeWMTfZIXh-pGg"
+                      name="1 Sell/contract the product/service/feature">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="decomposition" value="and" iref="_8A7uYJ5UEeWdweXRfGplUA">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="task" id="_O3B1MJ5WEeWdweXRfGplUA"
+                      name="To define a criteria to evaluate and select OSS components">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="decomposition" value="and" iref="_TEZzoJ2dEeWbOq1XqvRtXQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="goal" id="_DQUzoJ5dEeWdweXRfGplUA"
+                      name="2 To obtain best value for money ">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_A-7QoJ3MEeWZU_ZXxC6lTQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="goal" id="_DcPOMJ9ZEeWu8Zrpa3PUEg"
+                      name="1 To ensure that revenues are obtained as planned">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_lCPBQJ2UEeWbOq1XqvRtXQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="goal" id="_qKWIYJ_2EeWXAOEGqg7K5A" name="OSS component used">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="E3A49C"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_TdBZ4J2bEeWbOq1XqvRtXQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+               <ielementLink type="contribution" value="help" iref="_NVxu0J2bEeWbOq1XqvRtXQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="softgoal" id="_yVhR4KApEeWDqcLEP2OtUA" name="1 To satisfy customer needs">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+            </ielement>
+            <ielement type="goal" id="_CIbi4KJMEeW8fPReGqL5Jw"
+                      name="1 To incorporates external innovation inputs into the business offering">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="contribution" value="help" iref="_A-7QoJ3MEeWZU_ZXxC6lTQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+               <ielementLink type="contribution" value="help" iref="_ZNE94J2kEeWbOq1XqvRtXQ">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="task" id="_9fNi8KJ1EeW-uohh1i7h1A"
+                      name="To identify external projects for innovation capturing">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="decomposition" value="and" iref="_CIbi4KJMEeW8fPReGqL5Jw">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+            <ielement type="goal" id="_mmDLELk4EeWY084x2_LBEg" name="1 Law compliance">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="E3A49C"
+                        fontsize="12"/>
+            </ielement>
+            <ielement type="task" id="_OHoSoJ3UEeWZU_ZXxC6lTQ" name="To enable multichannel sales">
+               <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                        bgcolor="FFFFFF"
+                        fontfamily="Segoe UI"
+                        fontcolor="000000"
+                        fontsize="12"/>
+               <ielementLink type="decomposition" value="and" iref="_8A7uYJ5UEeWdweXRfGplUA">
+                  <graphic content="SVG"/>
+               </ielementLink>
+            </ielement>
+         </boundary>
+      </actor>
+      <actor id="_hVLBcJ0XEeWMTfZIXh-pGg" name="Customer">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </actor>
+      <actor id="_ilDU8J0XEeWMTfZIXh-pGg" name="Potential Customer">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </actor>
+      <actor type="role" id="_7tKzcJ0YEeWMTfZIXh-pGg" name="Information Provider">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <actorLink type="is_a" aref="_ilDU8J0XEeWMTfZIXh-pGg">
+            <graphic content="SVG"/>
+         </actorLink>
+         <actorLink type="is_a" aref="_av2oYJ0ZEeWMTfZIXh-pGg">
+            <graphic content="SVG"/>
+         </actorLink>
+      </actor>
+      <actor id="_av2oYJ0ZEeWMTfZIXh-pGg" name="Provider">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </actor>
+      <actor id="_m6b5AJ2UEeWbOq1XqvRtXQ" name="Shareholder">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </actor>
+      <actor type="role" id="_L7mJYJ5XEeWdweXRfGplUA" name="OSS Consultant">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <actorLink type="is_a" aref="_av2oYJ0ZEeWMTfZIXh-pGg">
+            <graphic content="SVG"/>
+         </actorLink>
+      </actor>
+      <actor id="_gK6lkLk2EeWY084x2_LBEg" name="Legal-Regulatory entity">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </actor>
+   </diagram>
+</istarml>

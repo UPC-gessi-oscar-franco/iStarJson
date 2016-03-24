@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<istarml version="1.0">
+   <diagram name="Test1.ood">
+      <graphic content="SVG"/>
+      <ielement type="resource" id="_8Og8oPCAEeWC7du-QYVGhw" name="resource1">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender aref="_3z4kYPCAEeWC7du-QYVGhw">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee aref="_zqPOcPCAEeWC7du-QYVGhw">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <ielement type="softgoal" id="_8yEVoPCAEeWC7du-QYVGhw" name="softgoal1">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender aref="_zqPOcPCAEeWC7du-QYVGhw">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee aref="_3z4kYPCAEeWC7du-QYVGhw">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <ielement type="task" id="_9QeI4PCAEeWC7du-QYVGhw" name="task1">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender aref="_3z4kYPCAEeWC7du-QYVGhw">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee aref="_zqPOcPCAEeWC7du-QYVGhw">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <ielement type="goal" id="_AJXBkPCBEeWC7du-QYVGhw" name="goal1">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender aref="_zqPOcPCAEeWC7du-QYVGhw">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee aref="_3z4kYPCAEeWC7du-QYVGhw">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <actor id="_zqPOcPCAEeWC7du-QYVGhw" name="Actor1">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </actor>
+      <actor id="_3z4kYPCAEeWC7du-QYVGhw" name="Actor2">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </actor>
+   </diagram>
+</istarml>
