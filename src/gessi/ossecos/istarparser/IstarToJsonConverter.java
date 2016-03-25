@@ -58,7 +58,7 @@ public class IstarToJsonConverter {
 			JSONObject objE = new JSONObject();
 			objE.put("source", eIs.getsNode());
 			objE.put("target", eIs.getfNode());
-			objE.put("linktype", eIs.getType());
+			objE.put("linktype", eIs.getType().toString());
 			objE.put("linksubtype", eIs.getLabel());
 			oEdges.add(objE);			
 			

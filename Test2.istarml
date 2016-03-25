@@ -17,7 +17,7 @@
             </dependee>
          </dependency>
       </ielement>
-      <ielement type="goal" id="20" name="Covered (Sickness)">
+      <ielement type="goal" id="_KwQGIPDhEeWC7du-QYVGhw" name="Covered (Sickness)">
          <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
                   bgcolor="FFFFFF"
                   fontfamily="Segoe UI"

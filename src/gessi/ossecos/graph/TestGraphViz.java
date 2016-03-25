@@ -1,4 +1,4 @@
-package gessi.ossecos.istarparser;
+package gessi.ossecos.graph;
 
 import java.io.File;
 

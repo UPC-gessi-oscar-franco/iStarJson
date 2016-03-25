@@ -1,4 +1,4 @@
-package gessi.ossecos.istarparser;
+package gessi.ossecos.graph;
 
 //GraphViz.java - a simple API to call dot from Java programs
 

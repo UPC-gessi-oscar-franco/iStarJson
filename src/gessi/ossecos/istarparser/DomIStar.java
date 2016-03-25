@@ -91,7 +91,7 @@ public class DomIStar {
 					.getNodeValue());
 			edgeIS.setLabel(subNode.getAttributes().getNamedItem("value")
 					.getNodeValue());
-			edgeIS.setType(NodeType.IELEMENTLINK);
+			edgeIS.setType(subNode.getAttributes().getNamedItem("type").getNodeValue());
 			break;
 		case "actorLink":
 			edgeIS.setsNode(parentNode.getAttributes().getNamedItem("id")
@@ -100,23 +100,23 @@ public class DomIStar {
 					.getNodeValue());
 			edgeIS.setLabel(subNode.getAttributes().getNamedItem("type")
 					.getNodeValue());
-			edgeIS.setType(NodeType.ACTORLINK);
+			edgeIS.setType(subNode.getAttributes().getNamedItem("type").getNodeValue());
 			break;
 		case "depender":
 			parentNode = parentNode.getParentNode();
-			edgeIS.setsNode(subNode.getAttributes().getNamedItem("aref")
+			edgeIS.setsNode(subNode.getAttributes().getNamedItem("iref")
 					.getNodeValue());
 			edgeIS.setfNode(parentNode.getAttributes().getNamedItem("id")
 					.getNodeValue());
-			edgeIS.setType(NodeType.DEPENDENCYLINK);
+			edgeIS.setType("dependency");
 			break;
 		case "dependee":
 			parentNode = parentNode.getParentNode();
 			edgeIS.setsNode(parentNode.getAttributes().getNamedItem("id")
 					.getNodeValue());
-			edgeIS.setfNode(subNode.getAttributes().getNamedItem("aref")
+			edgeIS.setfNode(subNode.getAttributes().getNamedItem("iref")
 					.getNodeValue());
-			edgeIS.setType(NodeType.DEPENDENCYLINK);
+			edgeIS.setType("dependency");
 			break;
 		default:
 			return null;

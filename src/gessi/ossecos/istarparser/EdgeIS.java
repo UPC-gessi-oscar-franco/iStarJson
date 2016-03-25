@@ -4,7 +4,7 @@ public class EdgeIS {
     private String sNode;
     private String fNode;
     private String label;
-    private NodeType type;
+    private String type;
 
     public EdgeIS() {
         label="";
@@ -34,12 +34,12 @@ public class EdgeIS {
         this.label = label;
     }
 
-    public NodeType getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(NodeType type) {
-        this.type = type;
+    public void setType(String string) {
+        this.type = string;
     }
     
     
