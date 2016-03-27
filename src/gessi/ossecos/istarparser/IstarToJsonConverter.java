@@ -43,7 +43,7 @@ public class IstarToJsonConverter {
 			objN.put("id", nIs.getId());
 			objN.put("name",nIs.getName());
 			objN.put("elemenType",nIs.getiStarType());
-			objN.put("boundary",nIs.getBundary());
+			objN.put("boundary",nIs.getBoundary());
 			oNodes.add(objN);
 
 		
