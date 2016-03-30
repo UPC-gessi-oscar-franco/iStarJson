@@ -42,8 +42,9 @@ public class TestGraphViz
 		// 		String repesentationType= "twopi";
 		// 		String repesentationType= "circo";
 		
-		File out = new File("/tmp/out"+gv.getImageDpi()+"."+ type);   // Linux
-		//      File out = new File("c:/eclipse.ws/graphviz-java-api/out." + type);    // Windows
+		//File out = new File("/tmp/out"+gv.getImageDpi()+"."+ type);   // Linux
+		 File out = new File("d:/tmp/out." + type);    // Windows
+		
 		gv.writeGraphToFile( gv.getGraph(gv.getDotSource(), type, repesentationType), out );
 	}
 

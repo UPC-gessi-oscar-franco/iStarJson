@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<istarml version="1.0">
+   <diagram name="SECO1.ood">
+      <graphic content="SVG"/>
+      <ielement type="resource" id="07" name="License &amp; Maintenance Fee">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender aref="04">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee aref="06">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <ielement type="softgoal" id="_CEHusPReEeWhdrGaxMhY5Q" name="Variety">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender aref="06">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee aref="04">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <ielement type="softgoal" id="_JjdOEPReEeWhdrGaxMhY5Q" name="User Satisfaction">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender aref="05">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee aref="06">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <ielement type="resource" id="03" name="Market Chanels">
+         <graphic content="basic" xpos="0" ypos="0" width="120" height="55" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+         <dependency>
+            <depender aref="04">
+               <graphic content="SVG"/>
+            </depender>
+            <dependee aref="05">
+               <graphic content="SVG"/>
+            </dependee>
+         </dependency>
+      </ielement>
+      <actor id="04" name="Developer">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </actor>
+      <actor id="05" name="Sw Vendor">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </actor>
+      <actor id="06" name="Customer">
+         <graphic content="basic" xpos="0" ypos="0" width="100" height="100" unit="pt"
+                  bgcolor="FFFFFF"
+                  fontfamily="Segoe UI"
+                  fontcolor="000000"
+                  fontsize="12"/>
+      </actor>
+   </diagram>
+</istarml>

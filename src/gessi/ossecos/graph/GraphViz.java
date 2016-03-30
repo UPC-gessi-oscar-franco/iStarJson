@@ -78,31 +78,33 @@ public class GraphViz
 	/**
 	 * Detects the client's operating system.
 	 */
-	private final static String osName = System.getProperty("os.name").replaceAll("\\s","");
+	//private final static String osName = System.getProperty("os.name").replaceAll("\\s","");
 
 	/**
 	 * Load the config.properties file.
 	 */
-	private final static String cfgProp = "config/config.properties";
-	private final static Properties configFile = new Properties() {
-		private final static long serialVersionUID = 1L; {
-			try {
-				load(new FileInputStream(cfgProp));
-			} catch (Exception e) {
-				System.err.println(e);
-			}
-		}
-	};
+	//private final static String cfgProp = "config/config.properties";
+//	private final static Properties configFile = new Properties() {
+//	private final static long serialVersionUID = 1L; 
+//		{
+//			try {
+//				load(new FileInputStream(cfgProp));
+//				
+//			} catch (Exception e) {
+//				System.err.println(e);
+//			}
+//		}
+//	};
 
 	/**
 	 * The dir. where temporary files will be created.
 	 */
-	private static String TEMP_DIR = configFile.getProperty("tempDirFor" + osName);
+	private static String TEMP_DIR = "/data";
 
 	/**
 	 * Where is your dot program located? It will be called externally.
 	 */
-	private static String DOT = configFile.getProperty("dotFor" + osName);
+	private static String DOT = "./data/dot.exe";
 
 	/**
 	 * The image size in dpi. 96 dpi is normal size. Higher values are 10% higher each.
@@ -206,15 +208,20 @@ public class GraphViz
 		File dot;
 		byte[] img_stream = null;
 
+		
 		try {
+			
 			dot = writeDotSourceToFile(dot_source);
-			if (dot != null)
+					if (dot != null)
 			{
+						
+						
 				img_stream = get_img_stream(dot, type, representationType);
 				if (dot.delete() == false) 
 					System.err.println("Warning: " + dot.getAbsolutePath() + " could not be deleted!");
 				return img_stream;
 			}
+			
 			return null;
 		} catch (java.io.IOException ioe) { return null; }
 	}
@@ -241,8 +248,12 @@ public class GraphViz
 	{
 		try {
 			FileOutputStream fos = new FileOutputStream(to);
+			
+						
 			fos.write(img);
+			 
 			fos.close();
+				
 		} catch (java.io.IOException ioe) { return -1; }
 		return 1;
 	}
@@ -270,11 +281,12 @@ public class GraphViz
 		byte[] img_stream = null;
 
 		try {
-			img = File.createTempFile("graph_", "."+type, new File(GraphViz.TEMP_DIR));
+		    img = File.createTempFile("graph_", ".dot"+type, new File(GraphViz.TEMP_DIR));
 			Runtime rt = Runtime.getRuntime();
 
 			// patch by Mike Chenault
 			// representation type with -K argument by Olivier Duplouy
+			 System.out.println("Working Directory = " +  System.getProperty("user.dir"));
 			String[] args = {DOT, "-T"+type, "-K"+representationType, "-Gdpi="+dpiSizes[this.currentDpiPos], dot.getAbsolutePath(), "-o", img.getAbsolutePath()};
 			Process p = rt.exec(args);
 			p.waitFor();
@@ -289,9 +301,9 @@ public class GraphViz
 				System.err.println("Warning: " + img.getAbsolutePath() + " could not be deleted!");
 		}
 		catch (java.io.IOException ioe) {
-			System.err.println("Error:    in I/O processing of tempfile in dir " + GraphViz.TEMP_DIR+"\n");
-			System.err.println("       or in calling external command");
-			ioe.printStackTrace();
+			System.err.println(ioe.toString());
+			
+			
 		}
 		catch (java.lang.InterruptedException ie) {
 			System.err.println("Error: the execution of the external program was interrupted");
@@ -311,13 +323,17 @@ public class GraphViz
 	{
 		File temp;
 		try {
-			temp = File.createTempFile("graph_", ".dot.tmp", new File(GraphViz.TEMP_DIR));
+			
+			
+			
+			temp = File.createTempFile("graph", "dot", new File(GraphViz.TEMP_DIR));
+			
 			FileWriter fout = new FileWriter(temp);
 			fout.write(str);
 			fout.close();
 		}
 		catch (Exception e) {
-			System.err.println("Error: I/O error while writing the dot source to temp file!");
+			System.err.println(e.toString());
 			return null;
 		}
 		return temp;

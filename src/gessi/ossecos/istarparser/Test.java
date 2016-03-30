@@ -31,7 +31,7 @@ public class Test {
 //			
 //		}
 		try {
-			System.out.println(IstarToJsonConverter.converter("Examples/Test2.istarml"));
+			System.out.println(IstarToJsonConverter.converter("Examples/SECO2.istarml"));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

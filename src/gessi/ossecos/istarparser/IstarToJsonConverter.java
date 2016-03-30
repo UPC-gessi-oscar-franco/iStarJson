@@ -25,7 +25,7 @@ public class IstarToJsonConverter {
 		
 		
 		String JsonString="";
-		String modelType="rationale";
+		String modelType="dependence";
 		JSONArray oNodes = new JSONArray();
 		JSONArray oEdges = new JSONArray();
 		JSONObject oDiagram = new JSONObject();
@@ -59,12 +59,17 @@ public class IstarToJsonConverter {
 			objE.put("source", eIs.getsNode());
 			objE.put("target", eIs.getfNode());
 			objE.put("linktype", eIs.getType().toString());
+			if(!eIs.getType().toString().equals("dependency"))
+			{
+				modelType="rationale";
+			}
 			objE.put("linksubtype", eIs.getLabel());
 			oEdges.add(objE);			
-			
+			System.out.println("Source " +eIs.getsNode()+" Target "+eIs.getfNode());			
 		}
 	
 		oDiagram.put("edges",oEdges);
+		oDiagram.put("modelType",modelType);
 		
 		JsonString = oDiagram.toJSONString();
 		return JsonString;

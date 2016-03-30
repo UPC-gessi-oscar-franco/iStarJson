@@ -104,7 +104,8 @@ public class DomIStar {
 			break;
 		case "depender":
 			parentNode = parentNode.getParentNode();
-			edgeIS.setsNode(subNode.getAttributes().getNamedItem("iref")
+			//TODO: iref for RD?
+			edgeIS.setsNode(subNode.getAttributes().getNamedItem("aref")
 					.getNodeValue());
 			edgeIS.setfNode(parentNode.getAttributes().getNamedItem("id")
 					.getNodeValue());
@@ -114,7 +115,8 @@ public class DomIStar {
 			parentNode = parentNode.getParentNode();
 			edgeIS.setsNode(parentNode.getAttributes().getNamedItem("id")
 					.getNodeValue());
-			edgeIS.setfNode(subNode.getAttributes().getNamedItem("iref")
+			//TODO: iref for RD?
+			edgeIS.setfNode(subNode.getAttributes().getNamedItem("aref")
 					.getNodeValue());
 			edgeIS.setType("dependency");
 			break;

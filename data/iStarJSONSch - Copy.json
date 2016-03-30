@@ -1,0 +1,101 @@
+{
+  "$schema": "http://testoneosseco.azurewebsites.net/json/schemas/istar/schema#",
+  "id": "http://testoneosseco.azurewebsites.net/json/schemas/istar/",
+  "type": "object",
+  "title": "Root schema iStar",
+  "description": "It schema describes the data format for iStarJSON, it is a JSON compliant format to represent i* diagrams.",
+  "name": "/",
+  "properties": {
+    "diagram": {
+      "type": "string",
+      "description": "a short descriptive name for the diagram.",
+      "name": "diagram"
+    },
+    "modelType": {
+      "type": "string",
+      "enum": [ "rationale", "dependence" ],
+      "description": "An explanation about the puropose of this instance described by this schema.",
+      "name": "modelType"
+    },
+    "nodes": {
+      "type": "array",
+      "description": "The set of nodes of the iStar model",
+      "name": "modelNodes",
+      "items": {
+        "type": "object",
+        "description": "Represent a simple node in the graph.",
+        "name": "node",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier of the node",
+            "name": "id"
+          },
+          "name": {
+            "type": "string",
+            "description": "An explanation about the puropose of this instance described by this schema.",
+            "name": "name"
+          },
+          "elementType": {
+            "type": "string",
+            "enum": [ "actor", "goal", "task", "resource", "softgoal", "belief" ],
+            "description": "An explanation about the puropose of this instance described by this schema.",
+            "name": "elementType"
+          },
+          "elementsubtype": {
+            "type": "string",
+            "description": "An explanation about the puropose of this instance described by this schema.",
+            "name": "elementsubtype"
+          },
+          "boundary": {
+            "type": "string",
+            "description": "An explanation about the puropose of this instance described by this schema.",
+            "name": "boundary"
+          }
+        }
+      }
+    },
+    "edges": {
+      "id": "http://jsonschema.net/edges",
+      "type": "array",
+      "description": "An explanation about the puropose of this instance described by this schema.",
+      "name": "edges",
+      "items": {
+        "id": "http://jsonschema.net/edges/0",
+        "type": "object",
+        "title": "0 schema.",
+        "description": "An explanation about the puropose of this instance described by this schema.",
+        "name": "link",
+        "properties": {
+
+          "source": {
+            "type": "string",
+            "description": "An explanation about the puropose of this instance described by this schema.",
+            "name": "source"
+          },
+          "target": {
+            "type": "string",
+            "description": "An explanation about the puropose of this instance described by this schema.",
+            "name": "target"
+          },
+          "linkType": {
+            "type": "string",
+            "enum": [ "association", "dependency", "means_end", "decomposition", "contribution" ],
+            "description": "An explanation about the puropose of this instance described by this schema.",
+            "name": "linkType"
+          },
+          "linksubtype": {
+            "type": "string",
+            "description": "An explanation about the puropose of this instance described by this schema.",
+            "name": "linksubtype"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "diagram",
+    "nodes",
+    "edges"
+  ]
+}

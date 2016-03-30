@@ -1,0 +1,97 @@
+{
+
+  [
+    {
+      "boundary": "boundary",
+      "elemenType": "softgoal",
+      "name": "Variety",
+      "id": "01"
+    },
+    {
+      "boundary": "boundary",
+      "elemenType": "actor",
+      "name": "Customer",
+      "id": "03"
+    },
+    {
+      "boundary": "Customer",
+      "elemenType": "goal",
+      "name": "Have software",
+      "id": "05"
+    },
+    {
+      "boundary": "Customer",
+      "elemenType": "task",
+      "name": "Acquire",
+      "id": "06"
+    },
+    {
+      "boundary": "Customer",
+      "elemenType": "softgoal",
+      "name": "Satisfaction",
+      "id": "07"
+    },
+    {
+      "boundary": "Customer",
+      "elemenType": "task",
+      "name": "Get applications",
+      "id": "08"
+    },
+    {
+      "boundary": "Customer",
+      "elemenType": "softgoal",
+      "name": "Variety",
+      "id": "02"
+    },
+    {
+      "boundary": "Customer",
+      "elemenType": "task",
+      "name": "Get platform",
+      "id": "09"
+    },
+    {
+      "boundary": "boundary",
+      "elemenType": "actor",
+      "name": "Developer",
+      "id": "04"
+    }
+  ],
+  [
+    {
+      "linktype": "dependency",
+      "source": "03",
+      "target": "01",
+      "linksubtype": ""
+    },
+    {
+      "linktype": "dependency",
+      "source": "01",
+      "target": "04",
+      "linksubtype": ""
+    },
+    {
+      "linktype": "decomposition",
+      "source": "06",
+      "target": "05",
+      "linksubtype": "or"
+    },
+    {
+      "linktype": "decomposition",
+      "source": "08",
+      "target": "06",
+      "linksubtype": "and"
+    },
+    {
+      "linktype": "contribution",
+      "source": "02",
+      "target": "07",
+      "linksubtype": "help"
+    },
+    {
+      "linktype": "decomposition",
+      "source": "09",
+      "target": "06",
+      "linksubtype": "and"
+    }
+  ]
+}

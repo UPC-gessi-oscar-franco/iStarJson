@@ -1,5 +1,6 @@
 package gessi.ossecos.graph;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
@@ -13,16 +14,24 @@ import org.json.simple.parser.ParseException;
 
 public class GraphModel {
 
-	public static void IStarJsonToPdf(String iStarModel) throws ParseException {
+	public static void IStarJsonToGraphFile(String iStarModel, String layout,
+			String typeGraph) throws ParseException {
 		JSONParser parser = new JSONParser();
 		JSONObject jsonObject = (JSONObject) parser.parse(iStarModel);
-	
+
 		JSONArray jsonArrayNodes = (JSONArray) jsonObject.get("nodes");
 		JSONArray jsonArrayEdges = (JSONArray) jsonObject.get("edges");
+		String modelType = jsonObject.get("modelType").toString();
+
+		// System.out.println(modelType);
+		// System.out.println(jsonArrayNodes.toJSONString());
+		// System.out.println(jsonArrayEdges.toJSONString());
+
+		System.out.println(jsonObject.toJSONString());
 
 		Hashtable<String, String> nodesHash = new Hashtable<String, String>();
 		Hashtable<String, String> boundaryHash = new Hashtable<String, String>();
-		//Hashtable<String, String> actorHash = new Hashtable<String, String>();
+		Hashtable<String, Integer> countNodes = new Hashtable<String, Integer>();
 		ArrayList<String> boundaryItems = new ArrayList<String>();
 		ArrayList<String> actorItems = new ArrayList<String>();
 		GraphViz gv = new GraphViz();
@@ -34,27 +43,36 @@ public class GraphModel {
 		for (int i = 0; i < jsonArrayNodes.size(); i++) {
 
 			jsonObject = (JSONObject) jsonArrayNodes.get(i);
-			nodeName = jsonObject.get("name").toString().replace(" ", "_")
-					.replace("(", "").replace(")", "");
+			nodeName = jsonObject.get("name").toString().replace(" ", "_");
+			// .replace("(", "").replace(")", "");
+			nodeName = nodeName.replaceAll("[\\W]|`[_]", "");
 			nodeType = jsonObject.get("elemenType").toString();
 			nodeBoundary = jsonObject.get("boundary").toString();
 			// TODO: Verify type of diagram
-			//if (!nodeType.equals("actor") & !nodeBoundary.equals("boundary")) {
-				gv.addln(renderNode(nodeName, nodeType));
+			// if (!nodeType.equals("actor") & !nodeBoundary.equals("boundary"))
+			// {
+			if (countNodes.get(nodeName) == null) {
+				countNodes.put(nodeName, 0);
+			} else {
+				countNodes.put(nodeName, countNodes.get(nodeName) + 1);
+				nodeName += "_" + countNodes.put(nodeName, 0);
 
-		//	}
+			}
+			gv.addln(renderNode(nodeName, nodeType));
+
+			// }
 
 			nodesHash.put(jsonObject.get("id").toString(), nodeName);
 			boundaryHash.put(jsonObject.get("id").toString(), nodeBoundary);
-			if (nodeType.equals("actor"))
-			{
-			   actorItems.add(nodeName);
+			if (nodeType.equals("actor")) {
+				actorItems.add(nodeName);
 			}
 		}
 
-		String edgeType="";
+		String edgeType = "";
 		String source = "";
 		String target = "";
+		String edgeSubType = "";
 		int subgraphCount = 0;
 		boolean hasCluster = false;
 		nodeBoundary = "na";
@@ -63,20 +81,23 @@ public class GraphModel {
 		for (int i = 0; i < jsonArrayEdges.size(); i++) {
 
 			jsonObject = (JSONObject) jsonArrayEdges.get(i);
-			edgeType = renderEdge("", jsonObject.get("linktype").toString());
-			idSource=jsonObject.get("source").toString();
-			idTarget=jsonObject.get("target").toString();
+			edgeSubType = jsonObject.get("linksubtype").toString();
+			edgeType = renderEdge(edgeSubType, jsonObject.get("linktype")
+					.toString());
+			idSource = jsonObject.get("source").toString();
+			idTarget = jsonObject.get("target").toString();
 			source = nodesHash.get(idSource);
 			target = nodesHash.get(idTarget);
-		
+
 			if (!boundaryHash.get(idSource).toString().equals("boundary")
-					 &&!boundaryHash.get(idTarget).toString().equals("boundary")) {
+					&& !boundaryHash.get(idTarget).toString()
+							.equals("boundary")) {
 				if (!boundaryHash.get(idSource).toString().equals(nodeBoundary)) {
 					nodeBoundary = boundaryHash.get(idSource).toString();
 					if (hasCluster) {
 						gv.addln(gv.end_subgraph());
-						hasCluster=false;
-						
+						hasCluster = false;
+
 					} else {
 						hasCluster = true;
 					}
@@ -84,61 +105,62 @@ public class GraphModel {
 					gv.addln(actorItems.get(subgraphCount++));
 					gv.addln("style=filled;");
 					gv.addln("color=lightgrey;");
-					
+
 				}
 				gv.addln(source + "->" + target + edgeType);
 
-			}
-			else
-			{
-				
+			} else {
+
 				boundaryItems.add(source + "->" + target + edgeType);
-				
+
 			}
 
 		}
-		gv.addln(gv.end_subgraph());
-		for(String boundaryE : boundaryItems)
-		{
+		if (subgraphCount > 0) {
+			gv.addln(gv.end_subgraph());
+		}
+		for (String boundaryE : boundaryItems) {
 			gv.addln(boundaryE);
 		}
 		gv.addln(gv.end_graph());
-			
-		
-		System.out.println(gv.getDotSource());
+
+		String type = typeGraph;
+		// String type = "dot";
+		// String type = "fig"; // open with xfig
+		// String type = "pdf";
+		// String type = "ps";
+		// String type = "svg"; // open with inkscape
+		// String type = "png";
+		// String type = "plain";
+
+		String repesentationType = layout;
+		// String repesentationType= "neato";
+		// String repesentationType= "fdp";
+		// String repesentationType= "sfdp";
+		// String repesentationType= "twopi";
+		// String repesentationType= "circo";
+
+		// //File out = new File("/tmp/out"+gv.getImageDpi()+"."+ type); //
+		// Linux
+		File out = new File("Examples/out." + type); // Windows
+		gv.writeGraphToFile(
+				gv.getGraph(gv.getDotSource(), type, repesentationType), out);
+
 	}
 
 	public static void main(String[] args) {
 
 		try {
-			IStarJsonToPdf(IstarToJsonConverter
-					.converter("Examples/Test2.istarml"));
+			//IStarJsonToGraphFile(
+					//IstarToJsonConverter.converter("Examples/SECO1.istarml"),
+					//"dot", "pdf");
+					
+					//IStarJsonToGraphFile("{"diagram":"SECO1.ood","nodes":[{"boundary":"boundary","elemenType":"resource","name":"License_Maintenance","id":"07"},{"boundary":"boundary","elemenType":"softgoal","name":"Variety","id":"_CEHusPReEeWhdrGaxMhY5Q"},{"boundary":"boundary","elemenType":"softgoal","name":"User Satisfaction","id":"_JjdOEPReEeWhdrGaxMhY5Q"},{"boundary":"boundary","name":"MarketChanels","id":"03","oselemenType":"resource"},{"boundary":"boundary","elemenType":"actor","name":"Developer","id":"04"},{"boundary":"boundary","elemenType":"actor","name":"SwVendor","id":"05"},{"boundary":"boundary","elemenType":"actor","name":"Customer","id":"06"}],"edges":[{"linktype":"dependency","source":"04","target":"07","linksubtype":""},{"linktype":"dependency","source":"07","target":"06","linksubtype":""},{"linktype":"dependency","source":"06","target":"_CEHusPReEeWhdrGaxMhY5Q","linksubtype":""},{"linktype":"dependency","source":"_CEHusPReEeWhdrGaxMhY5Q","target":"04","linksubtype":""},{"linktype":"dependency","source":"05","target":"_JjdOEPReEeWhdrGaxMhY5Q","linksubtype":""},{"linktype":"dependency","source":"_JjdOEPReEeWhdrGaxMhY5Q","target":"06","linksubtype":""},{"linktype":"dependency","source":"04","target":"03","linksubtype":""},{"linktype":"dependency","source":"03","target":"05","linksubtype":""}],"modelType":"dependence"}","dot", "pdf");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		// GraphViz gv = new GraphViz();
-		// gv.addln(gv.start_graph());
-		//
-		// //-------------
-		// String edge=renderEdge("", "dependency");
-		// gv.addln("Actor_One->Task_One"+edge);
-		// gv.addln("Task_One->Actor_Two"+edge);
-		// //------------
-		// gv.addln(renderNode("Actor_One", "actor"));
-		// gv.addln(renderNode("Actor_Two", "actor"));
-		// gv.addln(renderNode("Goal_One", "goal"));
-		// gv.addln(renderNode("Task_One", "task"));
-		// gv.addln(renderNode("Resource_One", "resource"));
-		// gv.addln(renderNode("Belief_One", "belief"));
-		// gv.addln(renderNode("Softgoal_One", "softgoal"));
-		// //-------------
-		//
-		//
-		//
-		// gv.addln(gv.end_graph());
-		// System.out.println(gv.getDotSource());
 	}
 
 	/**
@@ -183,6 +205,7 @@ public class GraphModel {
 	}
 
 	public static String renderEdge(String name, String type) {
+		// System.out.println("RENDER EDGES---"+type+"---"+name);
 		String strEdge = "";
 		if (name.trim().equals("")) {
 			name = "\"\"";
@@ -198,12 +221,13 @@ public class GraphModel {
 			break;
 		}
 
-		case "means_end": {
-			strEdge = "[arrowhead=onormal,label=" + name + "];";
-			break;
-		}
 		case "decomposition": {
-			strEdge = "[arrowhead=tee,label=" + name + "];";
+			if (name.equals("and")) {
+				strEdge = "[arrowhead=tee,label=" + name + "];";
+			} else {
+				strEdge = "[label=" + name + "];";
+			}
+
 			break;
 		}
 		case "contribution": {
