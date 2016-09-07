@@ -15,12 +15,12 @@ curl -v -H "Content-Type: application/xml" -X POST --data @Test2.istarml http://
 ```sh
 ```
 ```sh
-curl -v -H "Content-Type: application/xml" -X POST --data @Test2.istarml http://testoneosseco.azurewebsites.net/iStarJSONServiceREST/istar/istarJSONvalidator
+curl -v -H "Content-Type: application/xml" -X POST --data @Test2.istarJSON http://testoneosseco.azurewebsites.net/iStarJSONServiceREST/istar/istarJSONvalidator
 ```
 
 ### iSarJson graph converter
 ```sh
-curl -v -H "Content-Type: application/xml" -X POST --data @Test2.istarml http://localhost:8080/iStarJSONServiceREST/istar/istarJSONconverter/param?layaout=dot&type=pdf" > o.pdf
+curl -v -H "Content-Type: application/xml" -X POST --data @Test2.istaJSON http://localhost:8080/iStarJSONServiceREST/istar/istarJSONconverter/param?layaout=dot&type=pdf" > o.pdf
 ```
 
 
