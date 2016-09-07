@@ -13,8 +13,6 @@ curl -v -H "Content-Type: application/xml" -X POST --data @Test2.istarml http://
 ```
 ### Json Validator
 ```sh
-```
-```sh
 curl -v -H "Content-Type: application/xml" -X POST --data @Test2.istarJSON http://testoneosseco.azurewebsites.net/iStarJSONServiceREST/istar/istarJSONvalidator
 ```
 
